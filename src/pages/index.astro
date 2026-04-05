@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="EV Clinic Paris | Réparation Véhicules Électriques" description="EV Clinic Paris — Atelier spécialisé dans la réparation de véhicules électriques à Antony. Batteries HV, moteurs, onduleurs. Jusqu'à 70% moins cher qu'un remplacement.">
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center overflow-hidden bg-surface">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent z-10"></div>
+      <img
+        alt="Laboratoire de diagnostic EV"
+        class="w-full h-full object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQ22ms4JuSi-Rek0-9RTWKfJS0qDq4aVHXerJDt-A0AoOhGwrweD74JX6R3CrwNUqPHCg0PVWF6YZMZztf8YIlhZdyR2SPU0BGfyWZkli98EZJkAtAyT4BV1PBaQHKrD9eSUurjgtv1O46MmxACettnudbb5tMwUTwyoWO6LsYwHhwSKLXz4wgRrUL_a6wbeTYyDijmFSn2kfhpwCzytfQQ5S7mkAkJKugb3AnId3Q8aSUpigrbNJl_3pIw1lIqtPN_LkyqYR9KrH"
+      />
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-6 w-full pt-20">
+      <div class="max-w-2xl">
+        <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6 rounded-none">
+          Ingénierie de précision
+        </span>
+        <h1 class="text-6xl md:text-8xl font-headline font-bold leading-[0.9] text-on-surface mb-8 tracking-tighter">
+          La Clinique de Précision pour l'Excellence Électrique
+        </h1>
+        <p class="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed font-light">
+          Nous traitons la réparation de véhicules électriques avec la précision d'un bloc opératoire. Laboratoire de diagnostic expert pour la mobilité de demain.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/reservation"
+            class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all text-center"
+          >
+            Réserver un diagnostic
+          </a>
+          <a
+            href="/services"
+            class="bg-surface-container-highest text-on-secondary-container px-10 py-5 rounded-md font-headline font-bold tracking-tight hover:bg-surface-container-high transition-all text-center"
+          >
+            Découvrir nos services
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Aesthetic Detail -->
+    <div class="absolute bottom-12 right-12 hidden lg:block z-20">
+      <div class="bg-white/60 backdrop-blur-xl p-8 rounded-xl border border-white/20 shadow-2xl">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="h-2 w-12 bg-primary rounded-full"></div>
+          <span class="font-headline text-xs font-bold tracking-widest uppercase">État du système : Optimal</span>
+        </div>
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Santé batterie</div>
+            <div class="text-3xl font-headline font-bold text-on-surface">98.4%</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Gain d'efficacité</div>
+            <div class="text-3xl font-headline font-bold text-primary">+12kW</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-32 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div class="max-w-xl">
+          <h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-6 tracking-tight">Nos Instruments Spécialisés</h2>
+          <p class="text-on-surface-variant font-light">Interventions mécaniques avancées pour le groupe motopropulseur moderne. Notre laboratoire est équipé pour l'analyse en profondeur.</p>
+        </div>
+        <div class="text-right">
+          <span class="text-6xl font-headline font-bold text-outline-variant/30 leading-none">01—03</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
+        <!-- Battery Card -->
+        <a href="/batteries" class="bg-surface-container-lowest p-12 hover:bg-surface-bright transition-colors group block">
+          <div class="mb-8 text-primary">
+            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">battery_charging_full</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Calibration de Cellules Batterie</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-8">
+            Intervention haute tension et équilibrage cellulaire pour restaurer l'autonomie maximale et l'efficacité thermique.
+          </p>
+          <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-300"></div>
+        </a>
+
+        <!-- Software Card -->
+        <a href="/services" class="bg-surface-container-lowest p-12 hover:bg-surface-bright transition-colors group block">
+          <div class="mb-8 text-primary">
+            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Logiciel de Diagnostic</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-8">
+            Débogage firmware propriétaire et optimisation des modules pour des performances optimales du groupe motopropulseur électrique.
+          </p>
+          <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-300"></div>
+        </a>
+
+        <!-- Maintenance Card -->
+        <a href="/moteurs" class="bg-surface-container-lowest p-12 hover:bg-surface-bright transition-colors group block">
+          <div class="mb-8 text-primary">
+            <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+          </div>
+          <h3 class="text-2xl font-headline font-bold text-on-surface mb-4">Maintenance Clinique</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-8">
+            Ingénierie préventive pour les systèmes de refroidissement, les roulements haute vitesse et l'intégrité structurelle.
+          </p>
+          <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-300"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Asymmetric Detail Section -->
+  <section class="py-32 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-7">
+        <div class="relative">
+          <img
+            alt="Interface de diagnostic"
+            class="w-full aspect-video object-cover rounded-none grayscale hover:grayscale-0 transition-all duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-chONyrXBOV2apsgmuOvyKLSx_4KVDfti_RL9T3TZv2QazEVWBggZuUiVcsTjXpDGc0nx1pBhAKKwYTaNRheD7U1LtjvflGWylke-bjiiKV4OLupAX__4jPG2NPpapLDnXj5-GSBR33ypHwssnZCERJlAO-7FAt5uULX0ylYdgXx0g1-iCsrUxJUajEQUDv7Aof_EfrYOJd8M9QO-eGvnHCsvaI3nQWBdlxQGqJNzJKLCTf_GibroPJN_q5fNQ00R8uIoeGqbhYvK"
+          />
+          <div class="absolute -bottom-8 -right-8 bg-primary p-12 hidden lg:block">
+            <span class="material-symbols-outlined text-white text-5xl">biotech</span>
+          </div>
+        </div>
+      </div>
+      <div class="md:col-span-5 md:pl-12">
+        <h2 class="text-4xl font-headline font-bold text-on-surface mb-6 leading-tight">Au-delà de la réparation.<br/>Restauration système.</h2>
+        <p class="text-on-surface-variant font-light mb-8 leading-relaxed">
+          Les ateliers classiques abordent les VE comme des moteurs thermiques. Nous les traitons comme des ordinateurs sur roues. Chaque diagnostic est un processus piloté par les données.
+        </p>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 flex items-center justify-center bg-secondary-container text-on-secondary-container font-headline font-bold text-xs shrink-0">01</div>
+            <div>
+              <h4 class="font-bold text-on-surface">Isolation des données</h4>
+              <p class="text-sm text-on-surface-variant">Nous identifions les nœuds de défaillance spécifiques au sein du système de gestion de la batterie.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 flex items-center justify-center bg-secondary-container text-on-secondary-container font-headline font-bold text-xs shrink-0">02</div>
+            <div>
+              <h4 class="font-bold text-on-surface">Extraction de précision</h4>
+              <p class="text-sm text-on-surface-variant">Procédures non invasives pour remplacer les cellules de puissance critiques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands Section -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-on-surface-variant mb-12">Marques prises en charge</p>
+      <div class="flex flex-wrap justify-center gap-12 text-2xl font-headline font-bold text-outline-variant/40">
+        <span>Tesla</span>
+        <span>BMW</span>
+        <span>Renault</span>
+        <span>Volkswagen</span>
+        <span>Audi</span>
+        <span>Hyundai</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 bg-surface">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-headline font-bold text-on-surface mb-6 tracking-tight">
+        Votre véhicule mérite une expertise de précision
+      </h2>
+      <p class="text-on-surface-variant font-light mb-10 leading-relaxed">
+        Prenez rendez-vous pour un diagnostic complet. Nos experts analyseront votre véhicule électrique avec la rigueur d'un laboratoire.
+      </p>
+      <a
+        href="/reservation"
+        class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all"
+      >
+        Prendre rendez-vous
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

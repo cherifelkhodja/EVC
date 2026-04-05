@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pricing = [
+  {
+    name: 'Réparation Batterie HV Standard',
+    description: 'Incluant le remplacement de jusqu\'à 6 cellules défectueuses',
+    price: 'Sur devis',
+    warranty: '1 an',
+    turnaround: '1-3 jours ouvrés',
+  },
+  {
+    name: 'Réparation Batterie HV Premium',
+    description: 'Reconditionnement complet avec diagnostic approfondi',
+    price: '5 000 €',
+    warranty: '2 ans, sans limite de kilométrage',
+    turnaround: '10 jours ouvrés',
+  },
+];
+---
+
+<BaseLayout title="Réparation Batteries HV | EV Clinic Paris" description="Réparation et reconditionnement de batteries haute tension pour véhicules électriques. Jusqu'à 70% moins cher qu'un remplacement complet. Garantie jusqu'à 2 ans.">
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <a href="/services" class="inline-flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors mb-8">
+        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        Retour aux services
+      </a>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-7">
+          <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+            Batterie haute tension
+          </span>
+          <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
+            Réparation & Reconditionnement Batteries HV
+          </h1>
+          <p class="text-lg text-on-surface-variant font-light max-w-xl leading-relaxed">
+            Une alternative économique et durable au remplacement complet de votre batterie haute tension. Diagnostic cellulaire précis, équilibrage et remplacement de modules.
+          </p>
+        </div>
+        <div class="md:col-span-5 flex items-center">
+          <div class="bg-surface-container-low p-10 w-full">
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Économie moyenne</div>
+            <div class="text-6xl font-headline font-bold text-primary mb-4">70%</div>
+            <p class="text-sm text-on-surface-variant">moins cher qu'un remplacement complet de batterie</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Notre processus</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-outline-variant/15">
+        {[
+          { step: '01', title: 'Diagnostic', desc: 'Analyse complète du pack batterie : tension, résistance interne, capacité de chaque cellule.' },
+          { step: '02', title: 'Identification', desc: 'Isolation des cellules défectueuses et des modules en sous-performance.' },
+          { step: '03', title: 'Intervention', desc: 'Remplacement des cellules, équilibrage du pack, recalibration du BMS.' },
+          { step: '04', title: 'Validation', desc: 'Tests de charge/décharge complets. Vérification de l\'efficacité thermique.' },
+        ].map((item) => (
+          <div class="bg-surface-container-lowest p-10">
+            <div class="text-sm font-headline font-bold text-primary mb-4">{item.step}</div>
+            <h3 class="font-headline font-bold text-on-surface mb-3">{item.title}</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Tarifs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/15">
+        {pricing.map((plan) => (
+          <div class="bg-surface-container-lowest p-12">
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-2">{plan.name}</h3>
+            <p class="text-sm text-on-surface-variant mb-6">{plan.description}</p>
+            <div class="text-4xl font-headline font-bold text-primary mb-6">{plan.price}</div>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+                <span class="text-on-surface-variant">Délai : {plan.turnaround}</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-sm">verified</span>
+                <span class="text-on-surface-variant">Garantie : {plan.warranty}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Technologies de pointe</h2>
+      <p class="text-on-surface-variant font-light max-w-2xl leading-relaxed mb-12">
+        Nous utilisons des technologies modernes pour un diagnostic précis et une réparation fiable de votre batterie haute tension.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { icon: 'analytics', title: 'Diagnostic cellulaire', desc: 'Analyse individuelle de chaque cellule : capacité, résistance interne, courbes de charge.' },
+          { icon: 'thermostat', title: 'Gestion thermique', desc: 'Vérification et optimisation du système de refroidissement du pack batterie.' },
+          { icon: 'memory', title: 'Recalibration BMS', desc: 'Reprogrammation du système de gestion de la batterie après intervention.' },
+        ].map((tech) => (
+          <div class="flex items-start gap-4">
+            <span class="material-symbols-outlined text-primary text-2xl shrink-0" style="font-variation-settings: 'FILL' 1;">{tech.icon}</span>
+            <div>
+              <h3 class="font-bold text-on-surface mb-2">{tech.title}</h3>
+              <p class="text-sm text-on-surface-variant font-light leading-relaxed">{tech.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Problème de batterie ?</h2>
+      <p class="text-on-surface-variant font-light mb-8">Contactez-nous pour un diagnostic complet de votre batterie haute tension.</p>
+      <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
+        Réserver un diagnostic batterie
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Réservation | EV Clinic Paris" description="Prenez rendez-vous pour un diagnostic ou une réparation de votre véhicule électrique chez EV Clinic Paris.">
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+        Prise de rendez-vous
+      </span>
+      <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
+        Réserver une intervention
+      </h1>
+      <p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
+        Décrivez votre véhicule et le problème rencontré. Nous vous recontacterons rapidement pour confirmer un créneau.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6">
+      <form class="space-y-8">
+
+        <!-- Contact -->
+        <div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-6">Vos coordonnées</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="nom" class="block text-sm font-medium text-on-surface mb-2">Nom *</label>
+              <input type="text" id="nom" name="nom" required class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="prenom" class="block text-sm font-medium text-on-surface mb-2">Prénom *</label>
+              <input type="text" id="prenom" name="prenom" required class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-on-surface mb-2">Email *</label>
+              <input type="email" id="email" name="email" required class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="telephone" class="block text-sm font-medium text-on-surface mb-2">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Vehicle -->
+        <div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-6">Votre véhicule</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label for="marque" class="block text-sm font-medium text-on-surface mb-2">Marque *</label>
+              <select id="marque" name="marque" required class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors">
+                <option value="">Sélectionner</option>
+                <option value="tesla">Tesla</option>
+                <option value="bmw">BMW</option>
+                <option value="renault">Renault</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="audi">Audi</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div>
+              <label for="modele" class="block text-sm font-medium text-on-surface mb-2">Modèle *</label>
+              <input type="text" id="modele" name="modele" required placeholder="Ex: Model 3, ZOE, i3..." class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="annee" class="block text-sm font-medium text-on-surface mb-2">Année</label>
+              <input type="number" id="annee" name="annee" min="2010" max="2030" class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+            <div>
+              <label for="kilometrage" class="block text-sm font-medium text-on-surface mb-2">Kilométrage</label>
+              <input type="number" id="kilometrage" name="kilometrage" placeholder="Ex: 85000" class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Intervention -->
+        <div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-6">Type d'intervention</h2>
+          <div>
+            <label for="intervention" class="block text-sm font-medium text-on-surface mb-2">Intervention souhaitée *</label>
+            <select id="intervention" name="intervention" required class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors">
+              <option value="">Sélectionner</option>
+              <option value="diagnostic">Diagnostic général</option>
+              <option value="batterie">Réparation batterie HV</option>
+              <option value="moteur">Réparation moteur électrique</option>
+              <option value="onduleur">Réparation onduleur / DC-DC / ECU</option>
+              <option value="maintenance">Maintenance préventive</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label for="description" class="block text-sm font-medium text-on-surface mb-2">Description du problème *</label>
+          <textarea id="description" name="description" required rows="5" placeholder="Décrivez les symptômes, messages d'erreur, bruits anormaux..." class="w-full bg-surface-container-lowest border border-outline-variant px-4 py-3 text-on-surface focus:border-primary focus:outline-none transition-colors resize-vertical"></textarea>
+        </div>
+
+        <!-- Note -->
+        <div class="bg-secondary-container/30 border border-secondary-container p-6">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-primary text-lg shrink-0 mt-0.5">info</span>
+            <p class="text-sm text-on-surface-variant font-light">
+              Ce formulaire est actuellement en mode préparation. Pour prendre rendez-vous immédiatement, envoyez un email à <a href="mailto:contact@evclinic.fr" class="text-primary hover:underline font-medium">contact@evclinic.fr</a> avec les informations ci-dessus.
+            </p>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" disabled class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-5 rounded-md font-headline font-bold tracking-tight opacity-50 cursor-not-allowed">
+          Envoyer la demande (bientôt disponible)
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+</BaseLayout>

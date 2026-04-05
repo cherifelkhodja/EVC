@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Onduleurs & Convertisseurs DC/DC | EV Clinic Paris" description="Réparation d'onduleurs, convertisseurs DC/DC et unités de contrôle électronique pour véhicules électriques. Diagnostic avancé et réparation rapide.">
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <a href="/services" class="inline-flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors mb-8">
+        <span class="material-symbols-outlined text-sm">arrow_back</span>
+        Retour aux services
+      </a>
+      <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
+        Électronique de puissance
+      </span>
+      <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
+        Onduleurs, Convertisseurs DC/DC & ECU
+      </h1>
+      <p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
+        Réparation des composants électroniques de puissance au cœur de votre véhicule électrique. Diagnostic avancé, réparation rapide et fiable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Components -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
+
+        <!-- Onduleur -->
+        <div class="bg-surface-container-lowest p-12">
+          <div class="mb-6 text-primary">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+          </div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-4">Onduleur (Inverter)</h2>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-6">
+            L'onduleur convertit le courant continu (DC) de la batterie en courant alternatif (AC) pour alimenter le moteur électrique. Un composant critique pour la performance de traction.
+          </p>
+          <h3 class="font-bold text-on-surface text-sm mb-3">Symptômes courants</h3>
+          <ul class="space-y-2 text-sm text-on-surface-variant">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Perte de puissance soudaine
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Messages d'erreur système de traction
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Véhicule en mode dégradé
+            </li>
+          </ul>
+        </div>
+
+        <!-- DC/DC -->
+        <div class="bg-surface-container-lowest p-12">
+          <div class="mb-6 text-primary">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">transform</span>
+          </div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-4">Convertisseur DC/DC</h2>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-6">
+            Le convertisseur DC/DC transforme la haute tension de la batterie de traction en basse tension (12V/48V) pour alimenter l'électronique embarquée, l'éclairage et les accessoires.
+          </p>
+          <h3 class="font-bold text-on-surface text-sm mb-3">Symptômes courants</h3>
+          <ul class="space-y-2 text-sm text-on-surface-variant">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Batterie 12V qui se décharge
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Dysfonctionnements électroniques
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Impossibilité de démarrer
+            </li>
+          </ul>
+        </div>
+
+        <!-- ECU -->
+        <div class="bg-surface-container-lowest p-12">
+          <div class="mb-6 text-primary">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">developer_board</span>
+          </div>
+          <h2 class="text-xl font-headline font-bold text-on-surface mb-4">Unités de Contrôle (ECU)</h2>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-6">
+            Les ECU orchestrent l'ensemble du groupe motopropulseur électrique : gestion batterie (BMS), contrôle moteur, gestion thermique. Nous diagnostiquons et réparons ces modules critiques.
+          </p>
+          <h3 class="font-bold text-on-surface text-sm mb-3">Symptômes courants</h3>
+          <ul class="space-y-2 text-sm text-on-surface-variant">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Codes défauts multiples
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Comportement erratique du véhicule
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-error text-sm shrink-0 mt-0.5">warning</span>
+              Limitation de charge inexpliquée
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="py-20 bg-surface">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Notre approche</h2>
+        <p class="text-on-surface-variant font-light leading-relaxed mb-8">
+          Nous utilisons des technologies de pointe pour diagnostiquer et réparer rapidement vos composants électroniques de puissance. Chaque intervention est documentée et validée par des tests fonctionnels complets.
+        </p>
+        <div class="space-y-6">
+          {[
+            { step: '01', title: 'Diagnostic électronique', desc: 'Lecture des codes défauts, analyse des signaux CAN bus, mesures de tension et courant.' },
+            { step: '02', title: 'Réparation ciblée', desc: 'Remplacement des composants défaillants (IGBT, MOSFETs, condensateurs, circuits de commande).' },
+            { step: '03', title: 'Validation', desc: 'Tests fonctionnels sur banc d\'essai, vérification des protocoles de communication.' },
+          ].map((item) => (
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 flex items-center justify-center bg-secondary-container text-on-secondary-container font-headline font-bold text-xs shrink-0">{item.step}</div>
+              <div>
+                <h4 class="font-bold text-on-surface">{item.title}</h4>
+                <p class="text-sm text-on-surface-variant">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="bg-surface-container-low p-12">
+        <div class="space-y-8">
+          <div>
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Temps de diagnostic</div>
+            <div class="text-4xl font-headline font-bold text-on-surface">2-4h</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Temps de réparation moyen</div>
+            <div class="text-4xl font-headline font-bold text-primary">3-5 jours</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Taux de réussite</div>
+            <div class="text-4xl font-headline font-bold text-on-surface">95%+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Problème électronique ?</h2>
+      <p class="text-on-surface-variant font-light mb-8">Codes défauts, perte de puissance, comportement anormal — contactez-nous pour un diagnostic.</p>
+      <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
+        Réserver un diagnostic
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
