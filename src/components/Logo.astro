@@ -1,22 +1,18 @@
 ---
 interface Props {
   class?: string;
-  showTagline?: boolean;
   variant?: 'dark' | 'light';
 }
 
-const { class: className = '', showTagline = false, variant = 'dark' } = Astro.props;
-const textColor = variant === 'dark' ? 'text-zinc-900' : 'text-white';
-const taglineColor = variant === 'dark' ? 'text-zinc-900' : 'text-zinc-400';
+const { class: className = '', variant = 'dark' } = Astro.props;
+const filter = variant === 'light' ? 'brightness(0) invert(1)' : 'none';
 ---
 
-<a href="/" class:list={['inline-flex flex-col items-start', className]}>
-  <div class="flex items-baseline font-headline font-bold tracking-tighter leading-none">
-    <span class={textColor}>e</span>
-    <span class="text-primary">v</span>
-    <span class={textColor}>c</span>
-  </div>
-  {showTagline && (
-    <span class:list={['text-[6px] font-bold tracking-[0.25em] uppercase mt-0.5', taglineColor]}>Electric Vehicles Clinic</span>
-  )}
+<a href="/" class:list={['inline-block', className]}>
+  <img
+    src="/images/logo.png"
+    alt="EVC — Electric Vehicles Clinic"
+    class="h-full w-auto object-contain"
+    style={`filter: ${filter};`}
+  />
 </a>
