@@ -4,47 +4,50 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const services = [
   {
     icon: 'battery_charging_full',
-    title: 'Réparation & Reconditionnement Batteries HV',
-    description: 'Intervention professionnelle sur batteries haute tension. Diagnostic cellulaire, équilibrage, remplacement de modules défectueux. Une alternative économique au remplacement complet.',
-    highlights: ["Jusqu'à 70% moins cher qu'un remplacement", 'Délai : 1 à 3 jours ouvrés', 'Garantie 1 à 2 ans'],
+    title: 'Réparation de batteries haute tension',
+    description: 'Votre batterie perd en autonomie ? Nous analysons chaque cellule individuellement et remplaçons uniquement ce qui est défectueux. C\'est plus rapide, moins cher et plus écologique qu\'un remplacement complet.',
+    highlights: ["Jusqu'à 70% d'économie", '1 à 3 jours ouvrés', 'Garantie jusqu\'à 2 ans'],
+    price: 'À partir de 5 000 € (forfait premium)',
     href: '/batteries',
   },
   {
     icon: 'settings',
-    title: 'Réparation & Reconditionnement Moteurs Électriques',
-    description: 'Réparation et remise en état de moteurs électriques : roulements, stator, rotor. Restauration des performances d\'origine à moindre coût.',
-    highlights: ["Jusqu'à 60% moins cher qu'un remplacement", 'Small & Large Drive Units', 'Entretien préventif tous les 50 000-100 000 km'],
+    title: 'Réparation de moteurs électriques',
+    description: 'Bruit anormal, vibrations, perte de puissance — ce sont souvent les roulements ou des composants internes du moteur. Nous les réparons sans remplacer le moteur entier.',
+    highlights: ["Jusqu'à 60% d'économie", 'Small & Large Drive Units', 'Renault Zoe, Tesla, et plus'],
+    price: 'À partir de 2 000 € TTC',
     href: '/moteurs',
   },
   {
     icon: 'developer_board',
-    title: 'Onduleurs, Convertisseurs DC/DC & ECU',
-    description: 'Réparation des composants électroniques de puissance : onduleurs (DC→AC), convertisseurs DC/DC (haute→basse tension), unités de contrôle électronique.',
-    highlights: ['Diagnostic avancé', 'Technologies de pointe', 'Réparation rapide et fiable'],
+    title: 'Onduleurs, convertisseurs DC/DC & calculateurs',
+    description: 'L\'onduleur, le convertisseur DC/DC et les calculateurs sont le cerveau de votre véhicule. Quand ils tombent en panne, le véhicule peut se retrouver immobilisé. Nous les réparons.',
+    highlights: ['Diagnostic avancé', 'Réparation au composant', 'Tarif sur devis'],
+    price: 'Sur devis',
     href: '/onduleurs',
   },
 ];
 ---
 
-<BaseLayout title="Services | EV Clinic Paris" description="Découvrez nos services spécialisés : réparation batteries HV, moteurs électriques, onduleurs et convertisseurs DC/DC pour véhicules électriques.">
+<BaseLayout title="Nos Services | EV Clinic Paris" description="Réparation batteries HV, moteurs électriques, onduleurs et convertisseurs DC/DC. Toutes marques. Devis transparent, garantie incluse.">
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 bg-surface">
+  <section class="pt-32 pb-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-        Nos expertises
+        Nos services
       </span>
       <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
-        Services Spécialisés
+        Ce que nous faisons
       </h1>
       <p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
-        Maintenance, diagnostic et réparations complexes pour véhicules électriques de toutes marques. Notre laboratoire est équipé pour l'analyse en profondeur de chaque composant.
+        Nous réparons les composants les plus coûteux de votre véhicule électrique : batteries, moteurs et électronique de puissance. Toutes marques, particuliers et professionnels.
       </p>
     </div>
   </section>
 
-  <!-- Services Grid -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- Services -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6 space-y-px">
       {services.map((service, i) => (
         <a href={service.href} class="block bg-surface-container-lowest p-12 hover:bg-surface-bright transition-colors group">
@@ -52,14 +55,15 @@ const services = [
             <div class="md:col-span-1">
               <span class="text-4xl font-headline font-bold text-outline-variant/30">0{i + 1}</span>
             </div>
-            <div class="md:col-span-5">
+            <div class="md:col-span-6">
               <div class="mb-4 text-primary">
                 <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">{service.icon}</span>
               </div>
               <h2 class="text-2xl font-headline font-bold text-on-surface mb-4">{service.title}</h2>
-              <p class="text-on-surface-variant font-light leading-relaxed">{service.description}</p>
+              <p class="text-on-surface-variant font-light leading-relaxed mb-4">{service.description}</p>
+              <p class="text-sm font-medium text-primary">{service.price}</p>
             </div>
-            <div class="md:col-span-5 md:col-start-8">
+            <div class="md:col-span-4 md:col-start-9">
               <ul class="space-y-3">
                 {service.highlights.map((h) => (
                   <li class="flex items-center gap-3">
@@ -69,9 +73,6 @@ const services = [
                 ))}
               </ul>
             </div>
-            <div class="md:col-span-1 flex items-center justify-end">
-              <span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
-            </div>
           </div>
           <div class="h-1 w-0 group-hover:w-full bg-primary transition-all duration-300 mt-8"></div>
         </a>
@@ -79,44 +80,52 @@ const services = [
     </div>
   </section>
 
-  <!-- Vehicle-Specific Services -->
-  <section class="py-20 bg-surface">
+  <!-- Vehicle-Specific -->
+  <section class="py-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Services véhicules spécifiques</h2>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">Problèmes fréquents par marque</h2>
+      <p class="text-on-surface-variant font-light mb-12 max-w-2xl">Certaines pannes reviennent souvent selon les modèles. Nous les connaissons et savons les traiter efficacement.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
         <div class="bg-surface-container-lowest p-10">
-          <h3 class="font-headline font-bold text-on-surface mb-3">Renault Zoe</h3>
-          <p class="text-on-surface-variant font-light text-sm leading-relaxed">
-            Réparation roulement moteur et moteur échange standard. Solution aux problèmes courants de bruit, bourdonnement et vibrations.
+          <h3 class="font-headline font-bold text-on-surface mb-3 text-lg">Renault Zoe</h3>
+          <p class="text-on-surface-variant font-light text-sm leading-relaxed mb-3">
+            Le roulement moteur est un point faible connu de la Zoe. Symptômes : bruit de roulement, bourdonnement à vitesse constante, vibrations.
           </p>
+          <p class="text-sm text-primary font-medium">Réparation roulement ou moteur échange standard</p>
         </div>
         <div class="bg-surface-container-lowest p-10">
-          <h3 class="font-headline font-bold text-on-surface mb-3">Tesla LDU</h3>
-          <p class="text-on-surface-variant font-light text-sm leading-relaxed">
-            Réparation spécialisée des Large Drive Units Tesla. Diagnostic complet et restauration des performances.
+          <h3 class="font-headline font-bold text-on-surface mb-3 text-lg">Tesla Model S/X/3/Y</h3>
+          <p class="text-on-surface-variant font-light text-sm leading-relaxed mb-3">
+            Les Large Drive Units (LDU) peuvent développer des bruits ou des pertes de performance avec le temps et les kilomètres.
           </p>
+          <p class="text-sm text-primary font-medium">Réparation LDU spécialisée</p>
         </div>
         <div class="bg-surface-container-lowest p-10">
-          <h3 class="font-headline font-bold text-on-surface mb-3">E-Hybrid</h3>
-          <p class="text-on-surface-variant font-light text-sm leading-relaxed">
-            Services adaptés aux véhicules hybrides rechargeables. Diagnostic et maintenance des composants électriques.
+          <h3 class="font-headline font-bold text-on-surface mb-3 text-lg">BMW i3 / Hyundai Ioniq 5</h3>
+          <p class="text-on-surface-variant font-light text-sm leading-relaxed mb-3">
+            Dégradation de cellules batterie, erreurs BMS, problèmes de convertisseur DC/DC — des pannes que nous traitons régulièrement.
           </p>
+          <p class="text-sm text-primary font-medium">Diagnostic et réparation ciblée</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Brands -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- All Brands -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-xs font-bold tracking-[0.2em] uppercase text-on-surface-variant mb-12">Toutes marques prises en charge</p>
-      <div class="flex flex-wrap justify-center gap-8 text-lg font-headline font-bold text-outline-variant/40">
-        <span>Tesla Model S/3/X/Y</span>
-        <span>BMW i3/iX</span>
-        <span>Renault ZOE</span>
-        <span>VW</span>
+      <p class="text-xs font-bold tracking-[0.2em] uppercase text-on-surface-variant mb-10">Toutes marques prises en charge</p>
+      <div class="flex flex-wrap justify-center gap-x-10 gap-y-4 text-lg font-headline font-bold text-outline-variant/40">
+        <span>Tesla</span>
+        <span>BMW</span>
+        <span>Renault</span>
+        <span>Volkswagen</span>
         <span>Audi</span>
-        <span>Hyundai Ioniq 5</span>
+        <span>Hyundai</span>
+        <span>Mercedes</span>
+        <span>Peugeot</span>
+        <span>Kia</span>
+        <span>Porsche</span>
       </div>
     </div>
   </section>
@@ -124,11 +133,16 @@ const services = [
   <!-- CTA -->
   <section class="py-20 bg-surface">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Un problème avec votre véhicule électrique ?</h2>
-      <p class="text-on-surface-variant font-light mb-8">Contactez-nous pour un diagnostic précis et un devis transparent.</p>
-      <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
-        Prendre rendez-vous
-      </a>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Vous avez un problème avec votre véhicule ?</h2>
+      <p class="text-on-surface-variant font-light mb-8">Décrivez-nous votre situation. Nous vous répondrons rapidement avec un premier avis et une estimation.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
+          Prendre rendez-vous
+        </a>
+        <a href="mailto:contact@evclinic.fr" class="inline-block bg-surface-container-highest text-on-secondary-container px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:bg-surface-container-high transition-all">
+          Envoyer un email
+        </a>
+      </div>
     </div>
   </section>
 

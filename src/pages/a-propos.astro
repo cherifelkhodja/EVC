@@ -2,48 +2,54 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="À Propos | EV Clinic Paris" description="Découvrez EV Clinic Paris : notre équipe d'experts en véhicules électriques, notre histoire et notre mission. Branche française d'EV Clinic, réseau international.">
+<BaseLayout title="À Propos | EV Clinic Paris" description="EV Clinic Paris : spécialistes du véhicule électrique. Plus de 15 ans d'expérience, réseau international. Notre histoire, notre équipe, notre mission.">
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 bg-surface">
+  <section class="pt-32 pb-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-        Notre histoire
+        Qui sommes-nous
       </span>
       <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
-        À Propos d'EV Clinic Paris
+        Des spécialistes, pas des généralistes
       </h1>
       <p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
-        EV Clinic Paris est la branche française du réseau international EV Clinic, spécialiste de la réparation de véhicules électriques fondé en Croatie par Vanja Katic.
+        EV Clinic ne répare que des véhicules électriques. C'est notre seul métier, et nous le faisons bien.
       </p>
     </div>
   </section>
 
-  <!-- Mission -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- Story -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
       <div>
-        <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Notre mission</h2>
-        <p class="text-on-surface-variant font-light leading-relaxed mb-6">
-          Rendre la réparation de véhicules électriques accessible, professionnelle et durable. Nous croyons que la mobilité électrique ne doit pas être synonyme de coûts de maintenance prohibitifs.
-        </p>
-        <p class="text-on-surface-variant font-light leading-relaxed">
-          Notre équipe est composée d'experts spécialisés dans la mobilité durable et les technologies innovantes. Certains de nos fondateurs ont travaillé sur le diagnostic de cellules de batteries et ont participé au développement et à la maintenance des premiers véhicules électriques smart chez Mercedes il y a 15 ans.
-        </p>
+        <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Notre histoire</h2>
+        <div class="space-y-4 text-on-surface-variant font-light leading-relaxed">
+          <p>
+            EV Clinic a été fondé en Croatie par Vanja Katic, pionnier de la réparation de véhicules électriques en Europe. L'idée était simple : les véhicules électriques méritent des spécialistes, pas des garages généralistes qui improvisent.
+          </p>
+          <p>
+            En 2025, le réseau s'est étendu à Berlin avec une équipe d'ingénieurs issus de la recherche — certains avaient travaillé sur le diagnostic de cellules de batteries et participé au développement des premiers véhicules électriques smart chez Mercedes, il y a plus de 15 ans.
+          </p>
+          <p>
+            <strong class="text-on-surface">EV Clinic Paris</strong> est la branche française du réseau. Installés à Antony, aux portes de Paris, nous apportons cette même expertise à la clientèle française — particuliers comme professionnels.
+          </p>
+        </div>
       </div>
       <div>
-        <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Notre expertise</h2>
+        <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Ce qui nous différencie</h2>
         <div class="space-y-6">
           {[
-            { icon: 'biotech', title: 'Recherche & Diagnostic', desc: 'Formation continue sur les dernières technologies batteries et moteurs EV.' },
-            { icon: 'precision_manufacturing', title: 'Ingénierie de précision', desc: 'Chaque intervention suit un protocole rigoureux, documenté et validé.' },
-            { icon: 'eco', title: 'Durabilité', desc: 'Réparer plutôt que remplacer : notre approche réduit les déchets et préserve les ressources.' },
+            { icon: 'biotech', title: 'Expertise dédiée', desc: 'Nous ne faisons que du véhicule électrique. Pas de vidange, pas de pneus. Batteries, moteurs et électronique de puissance : c\'est notre spécialité.' },
+            { icon: 'savings', title: 'Réparer, pas remplacer', desc: 'Un concessionnaire vous proposera de remplacer un composant entier pour plusieurs milliers d\'euros. Nous réparons la pièce défectueuse — c\'est 60 à 70% moins cher.' },
+            { icon: 'handshake', title: 'Transparence totale', desc: 'Rapport de diagnostic clair, devis détaillé avant intervention, pas de mauvaise surprise. Vous savez exactement ce que vous payez et pourquoi.' },
+            { icon: 'eco', title: 'Approche durable', desc: 'Réparer au lieu de jeter, c\'est moins de déchets et moins de ressources. Chaque batterie reconditionnée, c\'est une batterie en moins dans une décharge.' },
           ].map((item) => (
             <div class="flex items-start gap-4">
               <span class="material-symbols-outlined text-primary text-2xl shrink-0" style="font-variation-settings: 'FILL' 1;">{item.icon}</span>
               <div>
                 <h3 class="font-bold text-on-surface mb-1">{item.title}</h3>
-                <p class="text-sm text-on-surface-variant font-light">{item.desc}</p>
+                <p class="text-sm text-on-surface-variant font-light leading-relaxed">{item.desc}</p>
               </div>
             </div>
           ))}
@@ -53,44 +59,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   </section>
 
   <!-- Network -->
-  <section class="py-20 bg-surface">
+  <section class="py-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Un réseau international</h2>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">Un réseau européen de spécialistes</h2>
+      <p class="text-on-surface-variant font-light mb-12 max-w-2xl">Chaque atelier EV Clinic partage son savoir-faire. Un problème rare résolu à Zagreb bénéficie directement à nos clients parisiens.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
-        {[
-          { city: 'Zagreb', country: 'Croatie', status: 'Siège — Opérationnel', flag: '🇭🇷' },
-          { city: 'Berlin', country: 'Allemagne', status: 'Opérationnel', flag: '🇩🇪' },
-          { city: 'Paris', country: 'France', status: 'Opérationnel', flag: '🇫🇷' },
-        ].map((location) => (
-          <div class="bg-surface-container-lowest p-10">
-            <div class="text-3xl mb-4">{location.flag}</div>
-            <h3 class="font-headline font-bold text-on-surface text-xl mb-1">{location.city}</h3>
-            <p class="text-sm text-on-surface-variant mb-3">{location.country}</p>
-            <span class="inline-block bg-primary/10 text-primary px-3 py-1 text-xs font-bold tracking-wide">
-              {location.status}
-            </span>
-          </div>
-        ))}
+        <div class="bg-surface-container-lowest p-10">
+          <h3 class="font-headline font-bold text-on-surface text-xl mb-2">Zagreb</h3>
+          <p class="text-sm text-on-surface-variant mb-3">Croatie — Siège du réseau</p>
+          <p class="text-sm text-on-surface-variant font-light">Fondé par Vanja Katic. Centre de recherche et développement des procédures de réparation EV Clinic.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-10">
+          <h3 class="font-headline font-bold text-on-surface text-xl mb-2">Berlin</h3>
+          <p class="text-sm text-on-surface-variant mb-3">Allemagne — Urban Tech Republic</p>
+          <p class="text-sm text-on-surface-variant font-light">Équipe d'ingénieurs issus de la recherche, avec plus de 15 ans d'expérience dans l'électromobilité.</p>
+        </div>
+        <div class="bg-surface-container-lowest p-10 border-2 border-primary/20">
+          <h3 class="font-headline font-bold text-primary text-xl mb-2">Paris</h3>
+          <p class="text-sm text-on-surface-variant mb-3">France — Antony (92)</p>
+          <p class="text-sm text-on-surface-variant font-light">La branche française du réseau, au service des particuliers et professionnels d'Île-de-France.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Values -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- For professionals -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Nos valeurs</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-outline-variant/15">
-        {[
-          { title: 'Précision', desc: 'Chaque diagnostic est un processus méthodique piloté par les données.' },
-          { title: 'Transparence', desc: 'Devis détaillé avant toute intervention. Pas de surprise.' },
-          { title: 'Durabilité', desc: 'Réparer plutôt que jeter. Prolonger la vie de chaque composant.' },
-          { title: 'Innovation', desc: 'Technologies de pointe et formation continue de notre équipe.' },
-        ].map((value) => (
-          <div class="bg-surface-container-lowest p-10">
-            <h3 class="font-headline font-bold text-on-surface mb-3">{value.title}</h3>
-            <p class="text-sm text-on-surface-variant font-light leading-relaxed">{value.desc}</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Pour les particuliers</h2>
+          <div class="space-y-4 text-on-surface-variant font-light leading-relaxed">
+            <p>
+              Votre véhicule électrique a un problème et le concessionnaire vous propose un devis astronomique ? Contactez-nous d'abord. Dans la majorité des cas, nous pouvons réparer le composant défectueux pour une fraction du prix.
+            </p>
+            <p>
+              Nous vous expliquons clairement le problème, le coût et le délai. Pas de jargon, pas de surprise.
+            </p>
           </div>
-        ))}
+        </div>
+        <div>
+          <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Pour les professionnels</h2>
+          <div class="space-y-4 text-on-surface-variant font-light leading-relaxed">
+            <p>
+              Vous êtes garagiste, carrossier, gestionnaire de flotte ou assureur ? Nous pouvons être votre partenaire technique pour les interventions sur composants haute tension.
+            </p>
+            <p>
+              Nos tarifs sont compétitifs, nos délais maîtrisés, et nous fournissons des rapports techniques détaillés pour chaque intervention.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -98,11 +116,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- CTA -->
   <section class="py-20 bg-surface">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Faites confiance à des experts</h2>
-      <p class="text-on-surface-variant font-light mb-8">Notre équipe est prête à prendre soin de votre véhicule électrique.</p>
-      <a href="/contact" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
-        Nous contacter
-      </a>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Envie d'en savoir plus ?</h2>
+      <p class="text-on-surface-variant font-light mb-8">Contactez-nous. Nous répondons à toutes vos questions, sans engagement.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
+          Nous contacter
+        </a>
+        <a href="/services" class="inline-block bg-surface-container-highest text-on-secondary-container px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:bg-surface-container-high transition-all">
+          Voir nos services
+        </a>
+      </div>
     </div>
   </section>
 

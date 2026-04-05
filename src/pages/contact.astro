@@ -2,65 +2,62 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Contact | EV Clinic Paris" description="Contactez EV Clinic Paris. 3-7 rue Georges Besse, Bâtiment Lavoisier, 92160 Antony. Email : contact@evclinic.fr. Sur rendez-vous uniquement.">
+<BaseLayout title="Contact | EV Clinic Paris" description="Contactez EV Clinic Paris. 3-7 rue Georges Besse, Bâtiment Lavoisier, 92160 Antony. Sur rendez-vous uniquement.">
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 bg-surface">
+  <section class="pt-32 pb-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
-        Nous trouver
+        Contact
       </span>
       <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
-        Contact
+        Parlons de votre véhicule
       </h1>
       <p class="text-lg text-on-surface-variant font-light max-w-2xl leading-relaxed">
-        Notre atelier est situé à Antony, aux portes de Paris. Les visites se font uniquement sur rendez-vous.
+        Un problème avec votre véhicule électrique ? Décrivez-nous la situation par email. Nous vous répondrons rapidement avec un premier avis.
       </p>
     </div>
   </section>
 
   <!-- Contact Info -->
-  <section class="py-20 bg-surface-container-low">
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
 
-        <!-- Address -->
-        <div class="bg-surface-container-lowest p-12">
-          <div class="mb-6 text-primary">
-            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
-          </div>
-          <h2 class="font-headline font-bold text-on-surface mb-4">Adresse</h2>
-          <p class="text-on-surface-variant font-light leading-relaxed">
-            3-7 rue Georges Besse<br/>
-            Bâtiment Lavoisier<br/>
-            92160 Antony<br/>
-            France
-          </p>
-        </div>
-
-        <!-- Email & Phone -->
         <div class="bg-surface-container-lowest p-12">
           <div class="mb-6 text-primary">
             <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">mail</span>
           </div>
-          <h2 class="font-headline font-bold text-on-surface mb-4">Email & Téléphone</h2>
-          <div class="space-y-3">
-            <a href="mailto:contact@evclinic.fr" class="block text-primary hover:underline">
-              contact@evclinic.fr
-            </a>
-            <p class="text-on-surface-variant font-light text-sm">
-              Téléphone : bientôt disponible
-            </p>
-          </div>
+          <h2 class="font-headline font-bold text-on-surface mb-4 text-xl">Écrivez-nous</h2>
+          <a href="mailto:contact@evclinic.fr" class="text-primary hover:underline text-lg font-medium block mb-3">
+            contact@evclinic.fr
+          </a>
+          <p class="text-sm text-on-surface-variant font-light leading-relaxed">
+            Décrivez votre véhicule (marque, modèle, année, kilométrage) et le problème rencontré. Plus vous donnez de détails, plus notre réponse sera précise.
+          </p>
         </div>
 
-        <!-- Hours -->
+        <div class="bg-surface-container-lowest p-12">
+          <div class="mb-6 text-primary">
+            <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+          </div>
+          <h2 class="font-headline font-bold text-on-surface mb-4 text-xl">Notre atelier</h2>
+          <p class="text-on-surface-variant leading-relaxed mb-3">
+            3-7 rue Georges Besse<br/>
+            Bâtiment Lavoisier<br/>
+            92160 Antony
+          </p>
+          <p class="text-sm text-on-surface-variant font-light">
+            Accès facile depuis Paris et toute l'Île-de-France.
+          </p>
+        </div>
+
         <div class="bg-surface-container-lowest p-12">
           <div class="mb-6 text-primary">
             <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">schedule</span>
           </div>
-          <h2 class="font-headline font-bold text-on-surface mb-4">Horaires</h2>
-          <div class="space-y-2 text-on-surface-variant font-light">
+          <h2 class="font-headline font-bold text-on-surface mb-4 text-xl">Horaires</h2>
+          <div class="space-y-2 text-on-surface-variant">
             <div class="flex justify-between">
               <span>Lundi — Vendredi</span>
               <span class="font-medium text-on-surface">9h — 17h</span>
@@ -70,21 +67,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <span class="font-medium text-on-surface">Fermé</span>
             </div>
           </div>
+          <p class="text-sm text-on-surface-variant font-light mt-4">
+            Téléphone : bientôt disponible
+          </p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Important Notice -->
-  <section class="py-20 bg-surface">
+  <section class="py-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <div class="bg-secondary-container/30 border border-secondary-container p-12 max-w-3xl">
         <div class="flex items-start gap-4">
           <span class="material-symbols-outlined text-primary text-2xl shrink-0 mt-1">info</span>
           <div>
-            <h2 class="font-headline font-bold text-on-surface mb-3">Accès sur rendez-vous uniquement</h2>
+            <h2 class="font-headline font-bold text-on-surface mb-3 text-lg">Sur rendez-vous uniquement</h2>
             <p class="text-on-surface-variant font-light leading-relaxed">
-              Notre atelier est situé sur un site sécurisé. Les visites spontanées ne sont pas possibles. Veuillez prendre rendez-vous par email afin que nous puissions enregistrer votre accès.
+              Notre atelier est situé sur un site avec contrôle d'accès. Les visites sans rendez-vous ne sont pas possibles. Contactez-nous par email pour convenir d'un créneau — nous enregistrerons votre accès à l'avance.
             </p>
           </div>
         </div>
@@ -92,21 +92,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- Map placeholder -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- Map -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-8 tracking-tight">Nous trouver</h2>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-8 tracking-tight">Comment venir</h2>
       <div class="w-full aspect-[21/9] bg-surface-container-highest flex items-center justify-center">
-        <div class="text-center">
-          <span class="material-symbols-outlined text-4xl text-outline-variant mb-4">map</span>
-          <p class="text-on-surface-variant font-light">
+        <div class="text-center p-8">
+          <span class="material-symbols-outlined text-4xl text-outline-variant mb-4 block">map</span>
+          <p class="text-on-surface-variant font-light mb-4">
             3-7 rue Georges Besse, Bâtiment Lavoisier, 92160 Antony
           </p>
           <a
             href="https://www.google.com/maps/search/3-7+rue+Georges+Besse+92160+Antony"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-block mt-4 text-primary hover:underline text-sm font-medium"
+            class="inline-block text-primary hover:underline text-sm font-medium"
           >
             Ouvrir dans Google Maps
           </a>
@@ -119,7 +119,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="py-20 bg-surface">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Prêt à prendre rendez-vous ?</h2>
-      <p class="text-on-surface-variant font-light mb-8">Décrivez votre problème et nous vous proposerons un créneau rapidement.</p>
+      <p class="text-on-surface-variant font-light mb-8">Remplissez notre formulaire avec les détails de votre véhicule et du problème rencontré.</p>
       <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
         Réserver en ligne
       </a>

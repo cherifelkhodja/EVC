@@ -1,26 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const pricing = [
-  {
-    name: 'Small Drive Unit',
-    description: 'Réparation moteur électrique — petite unité de traction',
-    price: '2 000 €',
-    turnaround: '4-5 jours ouvrés',
-  },
-  {
-    name: 'Large Drive Unit (sans stator)',
-    description: 'Réparation moteur électrique — grande unité de traction',
-    price: '4 200 €',
-    turnaround: '5-8 jours ouvrés',
-  },
-];
 ---
 
-<BaseLayout title="Réparation Moteurs Électriques | EV Clinic Paris" description="Réparation et reconditionnement de moteurs électriques pour véhicules électriques. Jusqu'à 60% moins cher qu'un remplacement. Small et Large Drive Units.">
+<BaseLayout title="Réparation Moteurs Électriques | EV Clinic Paris" description="Réparation de moteurs électriques : roulements, stator, rotor. Renault Zoe, Tesla LDU, toutes marques. Jusqu'à 60% d'économie. À partir de 2 000€.">
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 bg-surface">
+  <section class="pt-32 pb-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <a href="/services" class="inline-flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors mb-8">
         <span class="material-symbols-outlined text-sm">arrow_back</span>
@@ -31,33 +16,66 @@ const pricing = [
           <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
             Moteur électrique
           </span>
-          <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
-            Réparation & Reconditionnement Moteurs
+          <h1 class="text-5xl md:text-6xl font-headline font-bold text-on-surface tracking-tighter mb-6">
+            Votre moteur fait du bruit ou perd en puissance ?
           </h1>
           <p class="text-lg text-on-surface-variant font-light max-w-xl leading-relaxed">
-            Réparation professionnelle, durable et économique de moteurs électriques. Roulements, stator, rotor — nous restaurons les performances d'origine.
+            Un moteur électrique qui gronde ou vibre n'est pas forcément bon à remplacer. Dans la majorité des cas, une réparation ciblée suffit à restaurer les performances d'origine.
           </p>
         </div>
         <div class="md:col-span-5 flex items-center">
           <div class="bg-surface-container-low p-10 w-full">
-            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Économie moyenne</div>
-            <div class="text-6xl font-headline font-bold text-primary mb-4">60%</div>
-            <p class="text-sm text-on-surface-variant">moins cher qu'un remplacement de moteur complet</p>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Économie</div>
+                <div class="text-5xl font-headline font-bold text-primary">60%</div>
+                <p class="text-xs text-on-surface-variant mt-1">vs remplacement complet</p>
+              </div>
+              <div>
+                <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">À partir de</div>
+                <div class="text-4xl font-headline font-bold text-on-surface">2 000€</div>
+                <p class="text-xs text-on-surface-variant mt-1">TTC</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services spécifiques -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- Symptoms -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Interventions spécialisées</h2>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">Les signes qui doivent vous alerter</h2>
+      <p class="text-on-surface-variant font-light mb-12 max-w-2xl">Ne laissez pas un petit problème devenir une grosse panne. Plus tôt vous consultez, moins la réparation coûte cher.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/15">
+        {[
+          { icon: 'volume_up', title: 'Bruit anormal', desc: 'Grondement, sifflement ou bourdonnement inhabituel, surtout à vitesse constante. Souvent un problème de roulement.' },
+          { icon: 'vibration', title: 'Vibrations', desc: 'Le véhicule vibre anormalement au démarrage ou en roulant. Peut indiquer un déséquilibre ou une usure interne.' },
+          { icon: 'speed', title: 'Perte de puissance', desc: 'Le véhicule accélère moins bien ou se met en mode dégradé. Le moteur peut être en cause.' },
+        ].map((item) => (
+          <div class="bg-surface-container-lowest p-10">
+            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1;">{item.icon}</span>
+            <h3 class="font-bold text-on-surface mb-2 text-lg">{item.title}</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Specific models -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Modèles que nous traitons régulièrement</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/15">
         <div class="bg-surface-container-lowest p-12">
           <h3 class="text-xl font-headline font-bold text-on-surface mb-4">Renault Zoe — Roulement moteur</h3>
           <p class="text-on-surface-variant font-light leading-relaxed mb-4">
-            Problème courant : bruits anormaux, bourdonnement, vibrations. Nous réparons le roulement moteur ou proposons un moteur échange standard.
+            C'est le problème le plus fréquent sur la Zoe. Le roulement du moteur s'use et provoque un bruit de roulement caractéristique, des vibrations et parfois une perte de puissance. Si vous ne faites rien, le moteur peut finir par se bloquer.
+          </p>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-4">
+            Nous proposons deux solutions : la réparation du roulement (si le moteur n'est pas trop endommagé) ou le remplacement par un moteur échange standard reconditionné.
           </p>
           <ul class="space-y-2 text-sm text-on-surface-variant">
             <li class="flex items-center gap-2">
@@ -66,23 +84,34 @@ const pricing = [
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-              Remplacement roulement ou moteur échange
+              Réparation roulement ou moteur échange standard
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+              Intervention en quelques jours
             </li>
           </ul>
         </div>
         <div class="bg-surface-container-lowest p-12">
           <h3 class="text-xl font-headline font-bold text-on-surface mb-4">Tesla — Large Drive Unit (LDU)</h3>
           <p class="text-on-surface-variant font-light leading-relaxed mb-4">
-            Réparation spécialisée des LDU Tesla. Diagnostic complet, réparation des composants internes, restauration des performances nominales.
+            Les Tesla Model S et X utilisent des Large Drive Units qui peuvent développer des bruits ou des baisses de performance au fil des kilomètres. Le remplacement chez Tesla coûte très cher.
+          </p>
+          <p class="text-on-surface-variant font-light leading-relaxed mb-4">
+            Nous réparons les composants internes de la LDU : roulements, joints, composants électriques. Chaque moteur est testé après intervention pour garantir les performances.
           </p>
           <ul class="space-y-2 text-sm text-on-surface-variant">
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-              Expertise Tesla certifiée
+              Diagnostic complet de la drive unit
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-              Test dynamométrique après réparation
+              Réparation des composants internes
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+              Test fonctionnel après réparation
             </li>
           </ul>
         </div>
@@ -91,35 +120,40 @@ const pricing = [
   </section>
 
   <!-- Pricing -->
-  <section class="py-20 bg-surface">
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Tarifs</h2>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Tarifs indicatifs</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/15">
-        {pricing.map((plan) => (
-          <div class="bg-surface-container-lowest p-12">
-            <h3 class="text-xl font-headline font-bold text-on-surface mb-2">{plan.name}</h3>
-            <p class="text-sm text-on-surface-variant mb-6">{plan.description}</p>
-            <div class="text-4xl font-headline font-bold text-primary mb-6">{plan.price}</div>
-            <div class="flex items-center gap-3 text-sm">
-              <span class="material-symbols-outlined text-primary text-sm">schedule</span>
-              <span class="text-on-surface-variant">Délai : {plan.turnaround}</span>
-            </div>
+        <div class="bg-surface-container-lowest p-12">
+          <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Small Drive Unit</h3>
+          <p class="text-sm text-on-surface-variant mb-6">Réparation de moteur électrique — petite unité de traction</p>
+          <div class="text-4xl font-headline font-bold text-primary mb-6">2 000 € TTC</div>
+          <div class="flex items-center gap-3 text-sm">
+            <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+            <span class="text-on-surface-variant">4 à 5 jours ouvrés</span>
           </div>
-        ))}
+        </div>
+        <div class="bg-surface-container-lowest p-12">
+          <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Large Drive Unit</h3>
+          <p class="text-sm text-on-surface-variant mb-6">Réparation de moteur électrique — grande unité de traction (sans stator)</p>
+          <div class="text-4xl font-headline font-bold text-primary mb-6">4 200 € TTC</div>
+          <div class="flex items-center gap-3 text-sm">
+            <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+            <span class="text-on-surface-variant">5 à 8 jours ouvrés</span>
+          </div>
+        </div>
       </div>
-      <p class="text-sm text-on-surface-variant mt-8 font-light">
-        Tarifs TTC. Entretien préventif recommandé tous les 50 000 à 100 000 km.
-      </p>
+      <p class="text-sm text-on-surface-variant mt-6 font-light">Entretien préventif recommandé tous les 50 000 à 100 000 km. Le devis est gratuit et sans engagement.</p>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="py-20 bg-surface-container-low">
+  <section class="py-20 bg-surface">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Votre moteur a besoin d'attention ?</h2>
-      <p class="text-on-surface-variant font-light mb-8">Bruit anormal, perte de puissance, vibrations — prenez rendez-vous pour un diagnostic moteur.</p>
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Un bruit suspect dans votre moteur ?</h2>
+      <p class="text-on-surface-variant font-light mb-8">N'attendez pas que le problème s'aggrave. Contactez-nous pour un diagnostic rapide.</p>
       <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
-        Réserver un diagnostic moteur
+        Demander un diagnostic moteur
       </a>
     </div>
   </section>
