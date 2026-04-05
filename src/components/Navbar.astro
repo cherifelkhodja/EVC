@@ -1,21 +1,22 @@
 ---
+import Logo from './Logo.astro';
+
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
   { href: '/', label: 'Accueil' },
   { href: '/services', label: 'Services' },
   { href: '/a-propos', label: 'À propos' },
+  { href: '/rse', label: 'RSE' },
   { href: '/contact', label: 'Contact' },
 ];
 ---
 
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl transition-opacity">
-  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-    <a href="/" class="text-xl font-bold tracking-tighter text-zinc-900 font-headline">
-      EV Clinic Paris
-    </a>
+  <div class="flex items-center max-w-7xl mx-auto px-6 h-20">
+    <Logo class="h-12" />
 
-    <div class="hidden md:flex items-center space-x-10 font-headline tracking-tight">
+    <div class="hidden md:flex items-center space-x-8 font-headline tracking-tight ml-auto mr-8">
       {navLinks.map((link) => {
         const isActive = currentPath === link.href || currentPath === link.href + '/';
         return (
@@ -41,8 +42,9 @@ const navLinks = [
     <!-- Mobile menu button -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden flex flex-col gap-1.5 p-2"
+      class="md:hidden flex flex-col gap-1.5 p-2 ml-auto"
       aria-label="Menu"
+      aria-expanded="false"
     >
       <span class="w-6 h-0.5 bg-zinc-900 transition-transform" id="bar1"></span>
       <span class="w-6 h-0.5 bg-zinc-900 transition-opacity" id="bar2"></span>
@@ -81,5 +83,7 @@ const navLinks = [
   const menu = document.getElementById('mobile-menu');
   btn?.addEventListener('click', () => {
     menu?.classList.toggle('hidden');
+    const isOpen = !menu?.classList.contains('hidden');
+    btn?.setAttribute('aria-expanded', String(isOpen));
   });
 </script>

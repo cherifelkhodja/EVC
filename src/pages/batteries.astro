@@ -1,28 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const pricing = [
-  {
-    name: 'Réparation Batterie HV Standard',
-    description: 'Incluant le remplacement de jusqu\'à 6 cellules défectueuses',
-    price: 'Sur devis',
-    warranty: '1 an',
-    turnaround: '1-3 jours ouvrés',
-  },
-  {
-    name: 'Réparation Batterie HV Premium',
-    description: 'Reconditionnement complet avec diagnostic approfondi',
-    price: '5 000 €',
-    warranty: '2 ans, sans limite de kilométrage',
-    turnaround: '10 jours ouvrés',
-  },
-];
 ---
 
-<BaseLayout title="Réparation Batteries HV | EV Clinic Paris" description="Réparation et reconditionnement de batteries haute tension pour véhicules électriques. Jusqu'à 70% moins cher qu'un remplacement complet. Garantie jusqu'à 2 ans.">
+<BaseLayout title="Réparation Batteries Haute Tension | EV Clinic Paris" description="Réparation et reconditionnement de batteries haute tension pour véhicules électriques. Diagnostic cellulaire, remplacement ciblé. Jusqu'à 80% d'économie. Garantie jusqu'à 2 ans.">
 
   <!-- Hero -->
-  <section class="pt-32 pb-20 bg-surface">
+  <section class="pt-32 pb-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
       <a href="/services" class="inline-flex items-center gap-2 text-sm text-on-surface-variant hover:text-primary transition-colors mb-8">
         <span class="material-symbols-outlined text-sm">arrow_back</span>
@@ -33,38 +16,69 @@ const pricing = [
           <span class="inline-block bg-secondary-container text-on-secondary-container px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase mb-6">
             Batterie haute tension
           </span>
-          <h1 class="text-5xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter mb-6">
-            Réparation & Reconditionnement Batteries HV
+          <h1 class="text-5xl md:text-6xl font-headline font-bold text-on-surface tracking-tighter mb-6">
+            Votre batterie perd en autonomie ?
           </h1>
           <p class="text-lg text-on-surface-variant font-light max-w-xl leading-relaxed">
-            Une alternative économique et durable au remplacement complet de votre batterie haute tension. Diagnostic cellulaire précis, équilibrage et remplacement de modules.
+            Pas besoin de remplacer toute la batterie. Nous identifions les cellules défectueuses et ne remplaçons que ce qui est nécessaire. C'est plus rapide, moins cher, et plus écologique.
           </p>
         </div>
         <div class="md:col-span-5 flex items-center">
           <div class="bg-surface-container-low p-10 w-full">
-            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Économie moyenne</div>
-            <div class="text-6xl font-headline font-bold text-primary mb-4">70%</div>
-            <p class="text-sm text-on-surface-variant">moins cher qu'un remplacement complet de batterie</p>
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Économie</div>
+                <div class="text-5xl font-headline font-bold text-primary">80%</div>
+                <p class="text-xs text-on-surface-variant mt-1">vs remplacement complet</p>
+              </div>
+              <div>
+                <div class="text-[10px] text-zinc-500 uppercase tracking-widest mb-2">Délai</div>
+                <div class="text-5xl font-headline font-bold text-on-surface">1-3</div>
+                <p class="text-xs text-on-surface-variant mt-1">jours ouvrés</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="py-20 bg-surface-container-low">
+  <!-- Symptoms -->
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Notre processus</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-outline-variant/15">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">Quand faut-il nous consulter ?</h2>
+      <p class="text-on-surface-variant font-light mb-12 max-w-2xl">Voici les signes qui indiquent que votre batterie a besoin d'attention :</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/15">
         {[
-          { step: '01', title: 'Diagnostic', desc: 'Analyse complète du pack batterie : tension, résistance interne, capacité de chaque cellule.' },
-          { step: '02', title: 'Identification', desc: 'Isolation des cellules défectueuses et des modules en sous-performance.' },
-          { step: '03', title: 'Intervention', desc: 'Remplacement des cellules, équilibrage du pack, recalibration du BMS.' },
-          { step: '04', title: 'Validation', desc: 'Tests de charge/décharge complets. Vérification de l\'efficacité thermique.' },
+          { icon: 'battery_alert', title: 'Perte d\'autonomie', desc: 'Votre véhicule parcourt moins de kilomètres qu\'avant avec une charge complète.' },
+          { icon: 'error', title: 'Message d\'erreur', desc: 'Le tableau de bord affiche une alerte liée à la batterie ou au système haute tension.' },
+          { icon: 'speed', title: 'Charge lente', desc: 'La batterie met plus de temps à charger ou ne se charge plus complètement.' },
+          { icon: 'thermostat', title: 'Surchauffe', desc: 'La batterie chauffe anormalement pendant la charge ou la conduite.' },
         ].map((item) => (
-          <div class="bg-surface-container-lowest p-10">
-            <div class="text-sm font-headline font-bold text-primary mb-4">{item.step}</div>
-            <h3 class="font-headline font-bold text-on-surface mb-3">{item.title}</h3>
+          <div class="bg-surface-container-lowest p-8">
+            <span class="material-symbols-outlined text-primary text-2xl mb-4 block" style="font-variation-settings: 'FILL' 1;">{item.icon}</span>
+            <h3 class="font-bold text-on-surface mb-2">{item.title}</h3>
+            <p class="text-sm text-on-surface-variant font-light leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Notre processus, étape par étape</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {[
+          { step: '1', title: 'Diagnostic cellulaire', desc: 'Nous mesurons la tension, la résistance et la capacité de chaque cellule individuellement. On identifie exactement ce qui ne fonctionne pas.' },
+          { step: '2', title: 'Rapport et devis', desc: 'Vous recevez un rapport clair : quelles cellules sont défectueuses, quel est le coût et le délai. Vous décidez.' },
+          { step: '3', title: 'Réparation ciblée', desc: 'Remplacement des cellules défectueuses, équilibrage du pack batterie, recalibration du système de gestion (BMS).' },
+          { step: '4', title: 'Tests et garantie', desc: 'Tests complets de charge et décharge. Vérification thermique. Vous repartez avec une garantie écrite.' },
+        ].map((item) => (
+          <div>
+            <div class="text-5xl font-headline font-bold text-outline-variant/20 mb-4">{item.step}</div>
+            <h3 class="font-headline font-bold text-on-surface mb-2">{item.title}</h3>
             <p class="text-sm text-on-surface-variant font-light leading-relaxed">{item.desc}</p>
           </div>
         ))}
@@ -73,52 +87,83 @@ const pricing = [
   </section>
 
   <!-- Pricing -->
-  <section class="py-20 bg-surface">
+  <section class="py-16 bg-surface-container-low">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Tarifs</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/15">
-        {pricing.map((plan) => (
-          <div class="bg-surface-container-lowest p-12">
-            <h3 class="text-xl font-headline font-bold text-on-surface mb-2">{plan.name}</h3>
-            <p class="text-sm text-on-surface-variant mb-6">{plan.description}</p>
-            <div class="text-4xl font-headline font-bold text-primary mb-6">{plan.price}</div>
-            <div class="space-y-3 text-sm">
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary text-sm">schedule</span>
-                <span class="text-on-surface-variant">Délai : {plan.turnaround}</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-primary text-sm">verified</span>
-                <span class="text-on-surface-variant">Garantie : {plan.warranty}</span>
-              </div>
+        <div class="bg-surface-container-lowest p-12">
+          <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Réparation standard</h3>
+          <p class="text-sm text-on-surface-variant mb-6">Remplacement de cellules défectueuses (jusqu'à 6 cellules), équilibrage et recalibration BMS.</p>
+          <div class="text-4xl font-headline font-bold text-primary mb-6">Sur devis</div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+              <span class="text-on-surface-variant">1 à 5 jours ouvrés</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-sm">verified</span>
+              <span class="text-on-surface-variant">Garantie 1 an</span>
             </div>
           </div>
-        ))}
+        </div>
+        <div class="bg-surface-container-lowest p-12 relative overflow-hidden">
+          <span class="absolute top-4 right-4 bg-primary text-on-primary px-3 py-1 text-[10px] font-bold tracking-wider uppercase">Recommandé</span>
+          <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Réparation premium</h3>
+          <p class="text-sm text-on-surface-variant mb-6">Reconditionnement complet avec diagnostic approfondi et remplacement étendu.</p>
+          <div class="text-4xl font-headline font-bold text-primary mb-6">5 000 €</div>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-sm">schedule</span>
+              <span class="text-on-surface-variant">Environ 10 jours ouvrés</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-primary text-sm">verified</span>
+              <span class="text-on-surface-variant font-medium text-on-surface">Garantie 2 ans, sans limite de kilométrage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-on-surface-variant mt-6 font-light">Tous les tarifs sont TTC. Le devis est gratuit et sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- NO-MATTER-WHAT -->
+  <section class="py-16 bg-surface">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-secondary-container/20 border border-secondary-container p-12 max-w-3xl mx-auto">
+        <h2 class="font-headline font-bold text-on-surface mb-4 text-xl">Notre engagement "NO-MATTER-WHAT"</h2>
+        <p class="text-on-surface-variant font-light leading-relaxed">
+          Nous ne nous contentons pas de corriger l'erreur en cours. Pour chaque batterie, nous inspectons et restaurons <strong class="text-on-surface">l'ensemble du pack</strong> — y compris les composants affaiblis par l'âge, l'humidité ou d'autres facteurs. L'objectif : que votre batterie reparte dans le meilleur état possible, pas juste "réparée".
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Technologies -->
-  <section class="py-20 bg-surface-container-low">
-    <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Technologies de pointe</h2>
-      <p class="text-on-surface-variant font-light max-w-2xl leading-relaxed mb-12">
-        Nous utilisons des technologies modernes pour un diagnostic précis et une réparation fiable de votre batterie haute tension.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          { icon: 'analytics', title: 'Diagnostic cellulaire', desc: 'Analyse individuelle de chaque cellule : capacité, résistance interne, courbes de charge.' },
-          { icon: 'thermostat', title: 'Gestion thermique', desc: 'Vérification et optimisation du système de refroidissement du pack batterie.' },
-          { icon: 'memory', title: 'Recalibration BMS', desc: 'Reprogrammation du système de gestion de la batterie après intervention.' },
-        ].map((tech) => (
-          <div class="flex items-start gap-4">
-            <span class="material-symbols-outlined text-primary text-2xl shrink-0" style="font-variation-settings: 'FILL' 1;">{tech.icon}</span>
-            <div>
-              <h3 class="font-bold text-on-surface mb-2">{tech.title}</h3>
-              <p class="text-sm text-on-surface-variant font-light leading-relaxed">{tech.desc}</p>
-            </div>
-          </div>
-        ))}
+  <!-- FAQ -->
+  <section class="py-16 bg-surface-container-low">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-headline font-bold text-on-surface mb-12 tracking-tight">Questions fréquentes</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="font-bold text-on-surface mb-2">Toutes les batteries peuvent-elles être réparées ?</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed">Dans la grande majorité des cas, oui. Si la batterie est irréparable, nous vous conseillerons sur les solutions alternatives (remplacement partiel de modules, par exemple).</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-on-surface mb-2">Les performances baissent-elles après réparation ?</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed">Non, c'est souvent le contraire. Le remplacement des cellules défectueuses et le rééquilibrage du pack améliorent les performances globales de la batterie.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-on-surface mb-2">Et si la réparation échoue ?</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed">Si nous ne parvenons pas à réparer votre batterie, vous ne payez rien. Remboursement intégral garanti.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-on-surface mb-2">Comment se passe le diagnostic ?</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed">Nous utilisons la spectroscopie d'impédance pour mesurer chaque cellule individuellement. En moins d'une heure, nous identifions les cellules défectueuses — et même celles qui sont sur le point de lâcher.</p>
+        </div>
+        <div>
+          <h3 class="font-bold text-on-surface mb-2">Faut-il prendre rendez-vous ?</h3>
+          <p class="text-on-surface-variant font-light leading-relaxed">Oui, notre atelier fonctionne uniquement sur rendez-vous. Contactez-nous par email à <a href="mailto:contact@evclinic.fr" class="text-primary hover:underline">contact@evclinic.fr</a> pour convenir d'un créneau.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -127,9 +172,9 @@ const pricing = [
   <section class="py-20 bg-surface">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-headline font-bold text-on-surface mb-6 tracking-tight">Problème de batterie ?</h2>
-      <p class="text-on-surface-variant font-light mb-8">Contactez-nous pour un diagnostic complet de votre batterie haute tension.</p>
+      <p class="text-on-surface-variant font-light mb-8">Décrivez-nous les symptômes. Nous vous dirons rapidement si une réparation est possible et à quel coût.</p>
       <a href="/reservation" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
-        Réserver un diagnostic batterie
+        Demander un diagnostic batterie
       </a>
     </div>
   </section>
