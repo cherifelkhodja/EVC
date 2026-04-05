@@ -1,4 +1,6 @@
 ---
+import Logo from './Logo.astro';
+
 const currentPath = Astro.url.pathname;
 
 const navLinks = [
@@ -11,9 +13,7 @@ const navLinks = [
 
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl transition-opacity">
   <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
-    <a href="/" class="text-xl font-bold tracking-tighter text-zinc-900 font-headline">
-      EV Clinic Paris
-    </a>
+    <Logo class="text-3xl" showTagline />
 
     <div class="hidden md:flex items-center space-x-10 font-headline tracking-tight">
       {navLinks.map((link) => {

@@ -1,4 +1,5 @@
 ---
+import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 
 const services = [
@@ -27,9 +28,9 @@ const legal = [
 
       <!-- Brand + contact -->
       <div class="md:col-span-4">
-        <a href="/" class="font-headline font-bold text-white text-2xl block mb-4">
-          EV Clinic Paris
-        </a>
+        <div class="mb-4">
+          <Logo class="text-3xl" variant="light" showTagline />
+        </div>
         <p class="text-zinc-400 text-sm leading-relaxed mb-6">
           Atelier spécialisé dans la réparation de véhicules électriques. Batteries HV, moteurs, onduleurs.
         </p>
