@@ -3,4 +3,6 @@ dist
 .astro
 .git
 .github
-*.md
+CLAUDE.md
+MEMORY.md
+README.md

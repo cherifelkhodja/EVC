@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page introuvable | EV Clinic Paris" description="La page que vous cherchez n'existe pas.">
+
+  <section class="pt-32 pb-20 bg-surface min-h-[60vh] flex items-center">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <div class="text-8xl font-headline font-bold text-outline-variant/20 mb-6">404</div>
+      <h1 class="text-4xl font-headline font-bold text-on-surface mb-4 tracking-tight">
+        Page introuvable
+      </h1>
+      <p class="text-on-surface-variant font-light mb-10 leading-relaxed">
+        La page que vous cherchez n'existe pas ou a été déplacée.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/" class="inline-block bg-gradient-to-r from-primary to-primary-container text-on-primary px-10 py-4 rounded-md font-headline font-bold tracking-tight hover:opacity-90 transition-all">
+          Retour à l'accueil
+        </a>
+        <a href="/contact" class="inline-block bg-surface-container-highest text-on-secondary-container px-10 py-4 rounded-md font-headline font-bold tracking-tight hover:bg-surface-container-high transition-all">
+          Nous contacter
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
