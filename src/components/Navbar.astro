@@ -13,10 +13,10 @@ const navLinks = [
 ---
 
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl transition-opacity">
-  <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
+  <div class="flex items-center max-w-7xl mx-auto px-6 h-20">
     <Logo class="h-12" />
 
-    <div class="hidden md:flex items-center space-x-10 font-headline tracking-tight">
+    <div class="hidden md:flex items-center space-x-8 font-headline tracking-tight ml-auto mr-8">
       {navLinks.map((link) => {
         const isActive = currentPath === link.href || currentPath === link.href + '/';
         return (
@@ -42,7 +42,7 @@ const navLinks = [
     <!-- Mobile menu button -->
     <button
       id="mobile-menu-btn"
-      class="md:hidden flex flex-col gap-1.5 p-2"
+      class="md:hidden flex flex-col gap-1.5 p-2 ml-auto"
       aria-label="Menu"
     >
       <span class="w-6 h-0.5 bg-zinc-900 transition-transform" id="bar1"></span>
