@@ -64,34 +64,68 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <!-- Network -->
   <section class="py-16 bg-surface">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">6 ateliers en Europe</h2>
-      <p class="text-on-surface-variant font-light mb-12 max-w-2xl">Chaque atelier EV Clinic partage son savoir-faire et ses données de diagnostic. Un problème rare résolu à Ljubljana ou Berlin bénéficie directement à nos clients parisiens.</p>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-outline-variant/15 mb-px">
-        <div class="bg-surface-container-lowest p-8">
-          <h3 class="font-headline font-bold text-on-surface text-lg mb-1">Stupnik</h3>
-          <p class="text-xs text-on-surface-variant">Croatie — Siège R&D</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8">
-          <h3 class="font-headline font-bold text-on-surface text-lg mb-1">Velika Mlaka</h3>
-          <p class="text-xs text-on-surface-variant">Croatie</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8">
-          <h3 class="font-headline font-bold text-on-surface text-lg mb-1">Ljubljana</h3>
-          <p class="text-xs text-on-surface-variant">Slovénie</p>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-headline font-bold text-on-surface mb-4 tracking-tight">6 ateliers en Europe</h2>
+        <p class="text-on-surface-variant font-light max-w-2xl mx-auto">Chaque atelier EV Clinic partage son savoir-faire et ses données de diagnostic. Un problème rare résolu à Ljubljana ou Berlin bénéficie directement à nos clients parisiens.</p>
+      </div>
+
+      <!-- Paris — featured -->
+      <div class="mb-6">
+        <div class="bg-gradient-to-r from-primary to-primary-container p-10 md:p-12 text-on-primary">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <span class="text-xs font-bold tracking-[0.2em] uppercase opacity-80 mb-2 block">Notre atelier</span>
+              <h3 class="font-headline font-bold text-3xl mb-2">Paris — Antony</h3>
+              <p class="opacity-90 font-light">3-7 rue Georges Besse, Bâtiment Lavoisier, 92160 Antony</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a href="/contact" class="bg-white/20 backdrop-blur px-6 py-3 rounded-md font-headline font-bold text-sm text-center hover:bg-white/30 transition-colors">
+                Nous trouver
+              </a>
+              <a href="/reservation" class="bg-white text-primary px-6 py-3 rounded-md font-headline font-bold text-sm text-center hover:opacity-90 transition-opacity">
+                Prendre rendez-vous
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-outline-variant/15">
-        <div class="bg-surface-container-lowest p-8">
-          <h3 class="font-headline font-bold text-on-surface text-lg mb-1">Beograd</h3>
+
+      <!-- Other locations -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/15">
+        <div class="bg-surface-container-lowest p-6 hover:bg-surface-bright transition-colors">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <h3 class="font-headline font-bold text-on-surface">Stupnik</h3>
+          </div>
+          <p class="text-xs text-on-surface-variant">Croatie — Siège R&D</p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 hover:bg-surface-bright transition-colors">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <h3 class="font-headline font-bold text-on-surface">Velika Mlaka</h3>
+          </div>
+          <p class="text-xs text-on-surface-variant">Croatie</p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 hover:bg-surface-bright transition-colors">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <h3 class="font-headline font-bold text-on-surface">Ljubljana</h3>
+          </div>
+          <p class="text-xs text-on-surface-variant">Slovénie</p>
+        </div>
+        <div class="bg-surface-container-lowest p-6 hover:bg-surface-bright transition-colors">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <h3 class="font-headline font-bold text-on-surface">Beograd</h3>
+          </div>
           <p class="text-xs text-on-surface-variant">Serbie</p>
         </div>
-        <div class="bg-surface-container-lowest p-8">
-          <h3 class="font-headline font-bold text-on-surface text-lg mb-1">Berlin</h3>
+        <div class="bg-surface-container-lowest p-6 hover:bg-surface-bright transition-colors">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+            <h3 class="font-headline font-bold text-on-surface">Berlin</h3>
+          </div>
           <p class="text-xs text-on-surface-variant">Allemagne</p>
-        </div>
-        <div class="bg-surface-container-lowest p-8 border-2 border-primary/20">
-          <h3 class="font-headline font-bold text-primary text-lg mb-1">Paris</h3>
-          <p class="text-xs text-on-surface-variant">France — Antony (92)</p>
         </div>
       </div>
     </div>
